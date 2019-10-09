@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        dfr {
+            keyAlias 'v200'
+            keyPassword '123456'
+            storeFile file('/home/df/android_keys/v200.jks')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.pinhole.demo"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.dfr
+            signingConfig signingConfigs.dfr
+        }
+    }
+    sourceSets.main {
+        jniLibs.srcDirs = ["src/main/jniLibs"]
+        jni.srcDirs = []
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //删除之前打出的包，默认将包打在'build/libs/'下
+    task deleteOldJar(type: Delete){
+        delete 'build/libs/dface.jar'
+    }
+    //打包操作
+    task makeJar(type: org.gradle.api.tasks.bundling.Jar){
+        //要打成的包的名字
+        baseName 'dface'
+        //选取要打包的文件夹
+        from('build/intermediates/classes/release/com/dface/')
+        //需要跟实际类的包名路径一样
+        into('com/dface')
+        //排除在外的文件
+        exclude('BuildConfig.class', 'R.class', 'MainActivity.class')
+        //排除以R$开头的文件
+        exclude{ it.name.startsWith('R$')}
+    }
+
+    makeJar.dependsOn(deleteOldJar, build)
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support:recyclerview-v7:25.4.0'
+    compile 'com.j256.ormlite:ormlite-android:5.0'
+    compile 'com.j256.ormlite:ormlite-core:5.0'
+    implementation files('libs/sqlite-connector.jar')
+    implementation files('libs/dface.jar')
+    compile 'com.wuxiaolong.pullloadmorerecyclerview:library:1.1.2'
+}

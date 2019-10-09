@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名: "
+                    android:textColor="@color/app_bg"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/face_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="输入姓名"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/q10"
+                android:paddingRight="@dimen/q10">
+
+                <ImageView
+                    android:id="@+id/addPicture"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="185dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/picture_add" />
+
+                <ImageView
+                    android:id="@+id/addCamera"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="185dp"
+                    android:layout_marginLeft="50dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/camera_add" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/edit_face_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/sfw_blue"
+                android:text="确定"
+                android:textColor="@color/main_top_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/edit_face_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/darker_gray"
+                android:text="返回"
+                android:textColor="@color/main_top_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

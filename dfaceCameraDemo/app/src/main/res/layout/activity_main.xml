@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pinhole.demo.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/shape_divider_shadow"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/color_gray_light"
+        android:divider="@drawable/shape_divider_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:showDividers="middle">
+
+        <RadioButton
+            android:id="@+id/main_tab_btn_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="单人"
+            android:textColor="@drawable/selector_radio_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_tab_btn_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="多人"
+            android:textColor="@drawable/selector_radio_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_tab_btn_7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="人证"
+            android:textColor="@drawable/selector_radio_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_tab_btn_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="抓拍"
+            android:textColor="@drawable/selector_radio_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_tab_btn_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="检测"
+            android:textColor="@drawable/selector_radio_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_tab_btn_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="姿态"
+            android:textColor="@drawable/selector_radio_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_tab_btn_6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="单目"
+            android:textColor="@drawable/selector_radio_text_color" />
+
+    </RadioGroup>
+
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/q10"-->
+                <!--android:paddingRight="@dimen/q10">-->
+                <!--<TextView-->
+                    <!--android:id="@+id/textView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="模块测试"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                    <!--android:textColor="@android:color/holo_green_dark" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/q10"-->
+                <!--android:paddingRight="@dimen/q10">-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnPtCompare"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                    <!--android:text="照片比对" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnRGB"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                    <!--android:text="人脸检测" />-->
+            <!--</LinearLayout>-->
+
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/q10"-->
+                <!--android:paddingRight="@dimen/q10">-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnTracker"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="人脸跟踪" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnPose"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                    <!--android:text="人脸姿态" />-->
+            <!--</LinearLayout>-->
+
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/q10"-->
+                <!--android:paddingRight="@dimen/q10">-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnLive"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                    <!--android:text="单目活体" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnLiveInr"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                    <!--android:text="双目活体" />-->
+
+            <!--</LinearLayout>-->
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/q10"-->
+                <!--android:paddingRight="@dimen/q10">-->
+                <!--<TextView-->
+                    <!--android:id="@+id/textView2"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="综合应用"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                    <!--android:textColor="@android:color/holo_green_dark" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/q10"-->
+                <!--android:paddingRight="@dimen/q10">-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnSingleRecognize"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                    <!--android:text="单人识别场景" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnMutiRecognize"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                    <!--android:text="多人识别场景" />-->
+            <!--</LinearLayout>-->
+
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/q10"-->
+                <!--android:paddingRight="@dimen/q10">-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnFaceCard"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                    <!--android:text="人证比对" />-->
+
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnFaceCapture"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                    <!--android:text="人脸抓拍" />-->
+
+            <!--</LinearLayout>-->
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingLeft="@dimen/q10"-->
+            <!--android:paddingRight="@dimen/q10">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btnReg"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+                <!--android:text="注册人脸" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/btnRegBatch"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="@dimen/activity_vertical_margin"-->
+            <!--android:text="批量注册" />-->
+
+        <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="@dimen/q10"-->
+                <!--android:paddingRight="@dimen/q10">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/imageView2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/logo_big"-->
+                    <!--android:visibility="visible" />-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <item
+        android:id="@+id/photocompare"
+        android:icon="@drawable/photo_compare"
+        android:orderInCategory="0"
+        android:title="Select Image"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/userlist"
+        android:icon="@drawable/user_list"
+        android:orderInCategory="0"
+        android:title="Select Image"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/registers"
+        android:icon="@drawable/add_user"
+        android:orderInCategory="0"
+        android:title="Select Image"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/setting"
+        android:orderInCategory="0"
+        android:title="Select Image"
+        app:showAsAction="always" />
+
+
+</menu>
